@@ -14,6 +14,8 @@ select = "underline"
 hidden = false
 
 [keys.normal]
-C-Left = ":buffer-previous"
-C-Right = ":buffer-next"
+C-left = ":buffer-previous"
+C-h = ":buffer-previous"
+C-right = ":buffer-next"
+C-l = ":buffer-next"
 C-w = ":buffer-close"
