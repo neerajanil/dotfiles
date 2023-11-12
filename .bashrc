@@ -147,6 +147,8 @@ export NVM_DIR="$HOME/.nvm"
 
 alias devstart="devcontainer up --workspace-folder ."
 alias devbash="devcontainer exec --workspace-folder . /bin/bash"
+export EDITOR=hx
+export SHELL=/bin/bash
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
