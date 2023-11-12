@@ -145,7 +145,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias devstart="devcontainer up --workspace-folder ."
+alias devstart="devcontainer up --workspace-folder . --dotfiles-repository https://github.com/neerajanil/dotfiles.git"
 alias devbash="devcontainer exec --workspace-folder . /bin/bash"
 export EDITOR=hx
 export SHELL=/bin/bash
