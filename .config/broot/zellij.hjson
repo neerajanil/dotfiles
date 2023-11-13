@@ -1,0 +1,9 @@
+verbs: [
+	{
+        invocation: open
+        key: enter
+		apply_to: file
+		external: ["/bin/bash", "/usr/fpath/hx-zellij.sh", "{file}"]
+		leave_broot: false
+    }
+]

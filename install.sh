@@ -19,3 +19,26 @@ sudo mv -f zellij /usr/bin/
 
 [ -f .bashrc ] && mv .bashrc .backup_bashrc
 yadm clone -f https://github.com/neerajanil/dotfiles
+
+chmod u+x "$HOME/.scripts/*"
+
+mkdir -p ~/.dscripts
+touch ~/.dscripts/dscript.sh
+
+zellij setup --generate-completion bash > $HOME/.dscripts/zcomp.sh
+echo "source $HOME/.dscripts/zcomp.sh" >> $HOME/.dscripts/dscript.sh
+
+broot --print-shell-function bash > $HOME/.dscripts/brcomp.sh
+echo "source $HOME/.dscripts/brcomp.sh" >> $HOME/.dscripts/dscript.sh
+
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.dscripts/dscript.sh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+brew install nushell
+zellij options --default-shell  nu
+
+sudo -p mkdir /usr/fpath
+sudo cp -a ~/.scripts/. /usr/fpath/
+sudo cp ~/.config/broot/zellij.conf /usr/fpath
+sudo cp ~/.layouts/code.kdl /usr/fpath

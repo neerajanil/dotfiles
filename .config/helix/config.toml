@@ -15,7 +15,24 @@ hidden = false
 
 [keys.normal]
 C-left = ":buffer-previous"
-C-h = ":buffer-previous"
+C-j = ":buffer-previous"
 C-right = ":buffer-next"
 C-l = ":buffer-next"
 C-w = ":buffer-close"
+
+j = "move_char_left"
+k = "move_visual_line_down"
+i = "move_visual_line_up"
+l = "move_char_right"
+h = "insert_mode"
+
+C-s = ":w"
+A-e = "save_selection"
+f = ["find_next_char", "collapse_selection"]
+"ret" = ["open_below", "normal_mode"]
+
+[keys.insert]
+C-s = ":w"
+
+# [keys.normal.g]
+# f = ["find_next_char", "collapse_selection"]

@@ -145,11 +145,35 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias devstart="devcontainer up --workspace-folder . --dotfiles-repository https://github.com/neerajanil/dotfiles.git"
-alias devbash="devcontainer exec --workspace-folder . /bin/bash"
 export EDITOR=hx
 export SHELL=/bin/bash
+
+function devstart() {
+    devcontainer up --workspace-folder . --dotfiles-repository https://github.com/neerajanil/dotfiles.git
+}
+
+function devbash() {
+    devcontainer exec --workspace-folder . /bin/bash
+}
+
+function conreload() {
+    source $HOME/.bashrc
+}
+
+function conedit() { 
+    $EDITOR $HOME/.bashrc
+}
+
+function zelstart() {
+    zellij --layout /usr/fpath/code.kdl -s $1
+}
+
+function zelresume() {
+    zellij attach $1
+}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+source $HOME/.dscripts/dscript.sh
