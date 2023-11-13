@@ -28,12 +28,13 @@ touch ~/.dscripts/dscript.sh
 zellij setup --generate-completion bash > $HOME/.dscripts/zcomp.sh
 echo "source $HOME/.dscripts/zcomp.sh" >> $HOME/.dscripts/dscript.sh
 
-broot --print-shell-function bash > $HOME/.dscripts/brcomp.sh
-echo "source $HOME/.dscripts/brcomp.sh" >> $HOME/.dscripts/dscript.sh
-
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.dscripts/dscript.sh
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+brew install broot
+broot --print-shell-function bash > $HOME/.dscripts/brcomp.sh
+echo "source $HOME/.dscripts/brcomp.sh" >> $HOME/.dscripts/dscript.sh
 
 brew install nushell
 zellij options --default-shell  nu

@@ -26,7 +26,7 @@ i = "move_visual_line_up"
 l = "move_char_right"
 h = "insert_mode"
 
-C-s = ":w"
+C-s = ["normal_mode", ":w"]
 A-e = "save_selection"
 f = ["find_next_char", "collapse_selection"]
 "ret" = ["open_below", "normal_mode"]
