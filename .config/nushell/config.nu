@@ -757,11 +757,11 @@ $env.config = {
 }
 
 def devstart [] {
-    devcontainer up --workspace-folder . --dotfiles-repository https://github.com/neerajanil/dotfiles.git
+    /bin/bash -c "devcontainer up --workspace-folder . --dotfiles-repository https://github.com/neerajanil/dotfiles.git"
 }
 
 def devbash [] {
-    devcontainer exec --workspace-folder . nu
+    /bin.bash -ic "devcontainer exec --workspace-folder . nu"
 }
 
 def zelstart [session: string] {
@@ -773,3 +773,4 @@ def zelresume [session: string] {
 }
 
 source ~/.dscripts/dscript.nu
+source ~/.scripts/zcomp.nu
