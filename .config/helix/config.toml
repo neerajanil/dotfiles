@@ -32,7 +32,7 @@ f = ["find_next_char", "collapse_selection"]
 "ret" = ["open_below", "normal_mode"]
 
 [keys.insert]
-C-s = ":w"
+C-s = ["normal_mode", ":w"]
 
 # [keys.normal.g]
 # f = ["find_next_char", "collapse_selection"]

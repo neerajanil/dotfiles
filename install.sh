@@ -1,3 +1,4 @@
+cd ~
 pipx install black
 pipx install isort
 pipx install pyright
