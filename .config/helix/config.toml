@@ -2,7 +2,7 @@ theme = "catpuccin"
 
 [editor]
 line-number = "relative"
-mouse = false
+# mouse = false
 bufferline = "always"
 
 [editor.cursor-shape]
@@ -32,18 +32,10 @@ left = "no_op"
 right = "no_op"
 
 # C-s = ["normal_mode", ":w"]
-A-e = "save_selection"
-f = ["find_next_char", "collapse_selection"]
+# A-e = "save_selection"
+# f = ["find_next_char", "collapse_selection"]
 "ret" = ["open_below", "normal_mode"]
 
 [keys.insert]
-# C-s = ["normal_mode", ":w"]
-
 up = "no_op"
 down = "no_op"
-left = "no_op"
-right = "no_op"
-
-
-# [keys.normal.g]
-# f = ["find_next_char", "collapse_selection"]

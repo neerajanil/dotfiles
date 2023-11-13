@@ -25,6 +25,7 @@ chmod u+x "$HOME/.scripts/*"
 
 mkdir -p ~/.dscripts
 touch ~/.dscripts/dscript.sh
+touch ~/.dscripts/dscript.nu
 
 zellij setup --generate-completion bash > $HOME/.dscripts/zcomp.sh
 echo "source $HOME/.dscripts/zcomp.sh" >> $HOME/.dscripts/dscript.sh
@@ -35,7 +36,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew install broot
 broot --print-shell-function bash > $HOME/.dscripts/brcomp.sh
+broot --print-shell-function nushell > $HOME/.dscripts/brcomp.nu
 echo "source $HOME/.dscripts/brcomp.sh" >> $HOME/.dscripts/dscript.sh
+echo "source ~/.dscripts/brcomp.nu" >> $HOME/.dscripts/dscript.nu
 
 brew install nushell
 
