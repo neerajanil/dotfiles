@@ -153,7 +153,7 @@ function devstart() {
 }
 
 function devbash() {
-    devcontainer exec --workspace-folder . nu
+    devcontainer exec --workspace-folder . /bin/bash
 }
 
 function conreload() {

@@ -38,9 +38,9 @@ broot --print-shell-function bash > $HOME/.dscripts/brcomp.sh
 echo "source $HOME/.dscripts/brcomp.sh" >> $HOME/.dscripts/dscript.sh
 
 brew install nushell
-zellij options --default-shell  nu
+zellij options --default-shell nu
 
 sudo -p mkdir /usr/fpath
 sudo cp -a ~/.scripts/. /usr/fpath/
-sudo cp ~/.config/broot/zellij.conf /usr/fpath
+sudo cp ~/.config/broot/zellij.hjson /usr/fpath
 sudo cp ~/.layouts/code.kdl /usr/fpath
