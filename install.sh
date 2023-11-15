@@ -1,6 +1,7 @@
 cd ~
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 nvm install --lts
+sudo npm i -g vscode-langservers-extracted
 
 pipx install black
 pipx install isort
