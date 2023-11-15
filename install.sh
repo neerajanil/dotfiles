@@ -15,7 +15,7 @@ sudo install lazygit /usr/local/bin
 sudo apt update -y
 sudo apt install -y yadm
 sudo add-apt-repository -y ppa:maveonair/helix-editor
-apt install -y helix
+sudo apt install -y helix
 
 wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xvf zellij*.tar.gz
