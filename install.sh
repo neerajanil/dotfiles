@@ -1,4 +1,7 @@
 cd ~
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+nvm install --lts
+
 pipx install black
 pipx install isort
 pipx install pyright
@@ -11,7 +14,7 @@ sudo install lazygit /usr/local/bin
 sudo apt update -y
 sudo apt install -y yadm
 sudo add-apt-repository -y ppa:maveonair/helix-editor
-sudo apt install -y helix
+apt install -y helix
 
 wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xvf zellij*.tar.gz

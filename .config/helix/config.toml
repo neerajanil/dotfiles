@@ -1,6 +1,7 @@
-theme = "catpuccin"
+theme = "dracula_at_night"
 
 [editor]
+true-color = true
 line-number = "relative"
 # mouse = false
 bufferline = "always"
@@ -15,16 +16,44 @@ hidden = false
 
 [keys.normal]
 C-left = ":buffer-previous"
-C-j = ":buffer-previous"
+C-k = ":buffer-previous"
 C-right = ":buffer-next"
 C-l = ":buffer-next"
 C-w = ":buffer-close"
 
-j = "move_char_left"
-k = "move_visual_line_down"
-i = "move_visual_line_up"
-l = "move_char_right"
-h = "insert_mode"
+a = "move_char_left"
+s = "move_visual_line_down"
+w = "move_visual_line_up"
+d = "move_char_right"
+k = "move_prev_word_start"
+l = "move_next_word_start"
+j = "delete_selection"
+A-j = "delete_selection_noyank"
+h = "append_mode"
+H = "insert_at_line_end"
+b = "select_regex"
+B = "split_selection"
+
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+
+"ret" = ["open_below", "normal_mode"]
+
+[keys.select]
+a = "extend_char_left"
+s = "extend_visual_line_down"
+w = "extend_visual_line_up"
+d = "extend_char_right"
+k = "extend_prev_word_start"
+l = "extend_next_word_start"
+j = "delete_selection"
+A-j = "delete_selection_noyank"
+h = "append_mode"
+H = "insert_at_line_end"
+b = "select_regex"
+B = "split_selection"
 
 up = "no_op"
 down = "no_op"
